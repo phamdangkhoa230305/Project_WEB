@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VPP Online - Cửa hàng văn phòng phẩm trực tuyến với đa dạng sản phẩm chất lượng cao và giá cả hợp lý">
+    <meta name="keywords" content="văn phòng phẩm, vpp, bút, giấy, sổ, đồ dùng học tập">
+    <title>Văn Phòng Phẩm Online - VPP Online</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">VPP Online</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i> Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html"><i class="fas fa-store"></i> Gian hàng</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html"><i class="fas fa-shopping-basket"></i> Giỏ hàng</a></li>
+                    <li class="nav-item"><a class="nav-link" href="checkout.html"><i class="fas fa-credit-card"></i> Thanh toán</a></li>
+                    <li class="nav-item"><a class="nav-link" href="invoice.html"><i class="fas fa-file-invoice"></i> Xuất hóa đơn</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html"><i class="fas fa-user"></i> Đăng nhập</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <div class="jumbotron text-center bg-light p-5">
+            <h1>Chào mừng đến với VPP Online</h1>
+            <p>Cung cấp văn phòng phẩm chất lượng với giá tốt nhất!</p>
+            <img src="../img/Hinh1.jpg" alt="Văn phòng phẩm chất lượng cao" class="img-fluid mt-3 mb-3 rounded-image" loading="lazy">
+            <a href="shop.html" class="btn btn-primary btn-lg mt-3">Mua Ngay</a>
+        </div>
+    </div>
+
+    <!-- Sản phẩm nổi bật -->
+    <section class="featured-products py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">
+                <i class="fas fa-star text-warning"></i>
+                <span class="ms-2">Sản phẩm nổi bật</span>
+            </h2>
+            <div class="row g-4" id="productList">
+                <!-- Danh sách sản phẩm sẽ được tạo bằng JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <div class="row mt-3">
+                <div class="col-md-4">
+                    <h5>Liên hệ</h5>
+                    <p><i class="fa-solid fa-envelope"></i>  <a href="#" class="text-white text-decoration-none">hotro@vpponline.com</a></p>
+                    <p><i class="fa-solid fa-phone"></i>  <a href="#" class="text-white text-decoration-none">+84 901 234 567</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Địa chỉ</h5>
+                    <p><i class="fa-solid fa-location-dot"></i>  123 Đường ABC, Quận 1, TP. Hồ Chí Minh</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Theo dõi chúng tôi</h5>
+                    <i class="fa-brands fa-facebook"></i> <a href="#" class="text-white me-2 text-decoration-none">Facebook</a>
+                    <i class="fa-brands fa-instagram"></i> <a href="#" class="text-white me-2 text-decoration-none">Instagram</a>
+                    <i class="fa-brands fa-twitter"></i> <a href="#" class="text-white text-decoration-none">Twitter</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Products JS -->
+    <script src="../js/products.js"></script>
+    <script>
+        // Hiển thị 6 sản phẩm nổi bật trên trang chủ
+        document.addEventListener('DOMContentLoaded', function() {
+                displayProducts('productList', 4);
+        });
+    </script> 
+</body>
+</html>

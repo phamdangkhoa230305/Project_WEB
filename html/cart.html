@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Giỏ hàng VPP Online - Quản lý và thanh toán đơn hàng văn phòng phẩm của bạn">
+    <title>Giỏ hàng - VPP Online</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">VPP Online</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i> Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html"><i class="fas fa-store"></i> Gian hàng</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html"><i class="fas fa-shopping-basket"></i> Giỏ hàng</a></li>
+                    <li class="nav-item"><a class="nav-link" href="checkout.html"><i class="fas fa-credit-card"></i> Thanh toán</a></li>
+                    <li class="nav-item"><a class="nav-link" href="invoice.html"><i class="fas fa-file-invoice"></i> Xuất hóa đơn</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html"><i class="fas fa-user"></i> Đăng nhập</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2 class="text-center mb-4"><i class="fas fa-shopping-cart"></i> Giỏ hàng của bạn</h2>
+        <div id="emptyCart" class="empty-cart d-none">
+            <i class="fas fa-shopping-basket fa-3x mb-3"></i>
+            <h3>Giỏ hàng trống</h3>
+            <p>Hãy thêm sản phẩm vào giỏ hàng của bạn</p>
+            <a href="shop.html" class="btn btn-primary">Tiếp tục mua sắm</a>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered text-center">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Hình ảnh</th>
+                        <th>Sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th>
+                        <th>Tổng</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody id="cartItems"></tbody>
+            </table>
+        </div>
+        <div class="text-end mt-3">
+            <h4>Tổng cộng: <span id="totalAmount">0 ₫</span></h4>
+            <button class="btn btn-success btn-lg" id="checkoutBtn" onclick="checkout()" disabled>
+                <i class="fas fa-credit-card"></i> Thanh toán
+            </button>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p>&copy; 2025 VPP Online. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/cart.js"></script>
+</body>
+</html>
